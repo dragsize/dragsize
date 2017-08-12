@@ -1,0 +1,44 @@
+﻿<Window x:Class="Dragsize.WPF.Windows.Preferences"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Icon="../Resources/SystemTray.ico"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="Dragsize Hotkey Settings" Height="140" Width="300" Background="LightGray" >
+   <DockPanel Margin="10" >
+
+      <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" HorizontalAlignment="Right" Margin="5">
+         <Button Width="50" Command="{Binding CmdSave}">Ok</Button>
+         <Button Width="50" Command="{Binding CmdCancel}" Margin="5 0 0 0">Cancel</Button>
+      </StackPanel>
+
+      <StackPanel>
+
+         <DockPanel Margin="5 0 5 5">
+            <TextBlock DockPanel.Dock="Left">Hotkey:</TextBlock>
+
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
+            <TextBlock Margin="15 0 0 0">Change:</TextBlock>
+            <TextBox Margin="5 0 0 0" Width="35" Name="txtChangeKey" PreviewKeyDown="TxtChangeKey_OnPreviewKeyDown" ></TextBox>
+            </StackPanel>
+
+            <TextBlock Margin="5 0 0 0" Text="{Binding HotkeyDisplayName}" FontWeight="Bold"></TextBlock>
+
+         </DockPanel>
+
+         <StackPanel Orientation="Horizontal" Margin="5 0 0 0">
+            <CheckBox IsChecked="{Binding HotkeyShift}">Shift</CheckBox>
+            <CheckBox IsChecked="{Binding HotkeyCtrl}" Margin="10 0 0 0" >Ctrl</CheckBox>
+            <CheckBox IsChecked="{Binding HotkeyAlt}" Margin="10 0 0 0">Alt</CheckBox>
+            <CheckBox IsChecked="{Binding HotkeyWin}" Margin="10 0 0 0">Win</CheckBox>
+         </StackPanel>
+
+      </StackPanel>
+
+
+
+   </DockPanel>
+
+</Window>

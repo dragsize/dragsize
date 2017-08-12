@@ -1,0 +1,21 @@
+﻿<Window x:Class="Dragsize.WPF.CaptureForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        Background="DeepSkyBlue"
+        WindowStartupLocation="Manual"
+        ResizeMode="NoResize"
+        Title="CaptureForm" Height="300" Width="300">
+
+   <!--         
+   AllowsTransparency="True"  having this on causes slowness when resizing a large window, and sometimes out-of-memory exceptions
+   Opacity=".7"
+   -->
+
+    <Border BorderThickness="1" BorderBrush="Black">
+        <Label VerticalAlignment="Center" HorizontalAlignment="Center" Name="lblWindowInformation" FontSize="18" ></Label>
+    </Border>
+</Window>
